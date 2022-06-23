@@ -7,7 +7,7 @@ terraform {
   }
 
   backend "gcs" {
-    bucket = "tf-test-chaosmonkey"
+    bucket = "tf-sp-test-chaosmonkey"
     prefix = "network"
     credentials = "../rising-capsule.json"
   }

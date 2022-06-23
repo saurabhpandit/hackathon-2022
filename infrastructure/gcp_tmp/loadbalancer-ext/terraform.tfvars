@@ -1,6 +1,6 @@
-project_id = "rising-capsule-353505"
+project_id = "the-helix-354101"
 region     = "australia-southeast2"
-#zone    = "australia-southeast2-b"
+zone    = "australia-southeast2-b"
 enabled = true
 desc = "external global lb"
 name = "ext-l7-test"

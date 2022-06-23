@@ -20,6 +20,10 @@ variable "desc" {
   description = "Description for all loadbalancer resources"
 }
 
+variable "zone" {
+  type    = string
+}
+
 variable "region" {
   type    = string
 }

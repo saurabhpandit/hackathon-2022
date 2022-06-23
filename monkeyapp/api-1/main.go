@@ -17,6 +17,7 @@ import (
 type Spec struct {
 	Name string
 	Node string
+	Pod string
 }
 
 func healthCheck(w http.ResponseWriter, r *http.Request) {
@@ -135,7 +136,7 @@ func main() {
 
 		tmpl := template.Must(template.ParseFiles("./templates/my-template.html"))
 
-		data := Spec{Name: "Monkey Business", Node: os.Getenv("KUBERNETES_NODENAME")}
+		data := Spec{Name: "Monkey Business", Node: os.Getenv("MY_NODE_NAME"), Pod: os.Getenv("MY_POD_NAME")}
 
 		tmpl.Execute(w, data)
 	})

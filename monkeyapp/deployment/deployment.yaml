@@ -19,10 +19,14 @@ spec:
           ports:
             - containerPort: 8080
           env:
-            - name: KUBERNETES_NODENAME
+            - name: MY_NODE_NAME
               valueFrom:
                 fieldRef:
                   fieldPath: spec.nodeName
+            - name: MY_POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
           livenessProbe:
             httpGet:
               path: /healthz

@@ -1,10 +1,10 @@
 version: '3'
 
 vars:
-  CLUSTER_NAME: cluster-00
-  GITHUB_USER: xunholy
+  CLUSTER_NAME: gke-cluster-a
+  GITHUB_USER: saurabhpandit
   GITHUB_REPO: hackathon-2022
-  GITHUB_BRANCH: master
+  GITHUB_BRANCH: test/sp-flux
 
 tasks:
   bootstrap:

@@ -1,4 +1,4 @@
-project_id = "rising-capsule-353505"
+project_id = "the-helix-354101"
 region     = "australia-southeast2"
 zone       = "australia-southeast2-b"
 subnet_name_a = "gke-subnetwork-a"

@@ -34,7 +34,7 @@ resource "google_compute_url_map" "url_map" {
   name        = var.name
   description = var.desc
   host_rule {
-    hosts        = ["app.chaosmonkeys.net"  ]
+    hosts        = ["sp-app.chaosmonkeys.net"  ]
     path_matcher = "app"
   }
 //  host_rule {
@@ -43,7 +43,7 @@ resource "google_compute_url_map" "url_map" {
 //  }
 
   host_rule {
-    hosts        = ["test.chaosmonkeys.net"  ]
+    hosts        = ["sp-test.chaosmonkeys.net"  ]
     path_matcher = "test"
   }
 
@@ -91,7 +91,7 @@ resource "google_compute_backend_service" "neg_backend_a" {
   load_balancing_scheme = "EXTERNAL_MANAGED"
 
   backend {
-    group = "https://www.googleapis.com/compute/v1/projects/rising-capsule-353505/zones/australia-southeast2-b/networkEndpointGroups/neg-a-80"
+    group = "https://www.googleapis.com/compute/v1/projects/${var.project_id}/zones/${var.zone}/networkEndpointGroups/neg-a-80"
     balancing_mode        = "RATE"
     max_rate_per_endpoint = 50
 
@@ -119,7 +119,7 @@ resource "google_compute_backend_service" "neg_backend_b" {
   load_balancing_scheme = "EXTERNAL_MANAGED"
 
   backend {
-    group = "https://www.googleapis.com/compute/v1/projects/rising-capsule-353505/zones/australia-southeast2-b/networkEndpointGroups/neg-b-80"
+    group = "https://www.googleapis.com/compute/v1/projects/${var.project_id}/zones/${var.zone}/networkEndpointGroups/neg-b-80"
     balancing_mode        = "RATE"
     max_rate_per_endpoint = 50
 
